@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+   
+   <style>
+    .button input:hover{
+        zoom:110%;
+    max-zoom:500px;
+    
+    }
+    a:hover{
+        
+        zoom:125%;
+    max-zoom:500px;
+    color:crimson;
+    }
+    img{
+     padding: top 0;
+     padding-left: 0%;
+    
+    }
+    h1{
+        margin-top:auto ;
+        padding-top:0px;
+    }
+
+  
+#form1{
+                  
+                     
+                     
+                     
+                     text-align:center;
+                     font-size: larger;
+                     
+                 
+                 }
+                 
+                 body{
+                     background-image:url("wp.jpg");
+                     border-image-repeat:no repeat;
+                    flex-direction: column;
+                    
+display:flex;
+                     justify-content: center;
+                     margin-top:0px;
+                 }
+                 input{
+                     border-radius:1rem;
+                 }
+                 .button input:hover{
+                 background-color: aqua;
+                 color:black;
+                 }
+    </style>
+    <script type="text/javascript">
+        function myfun1()
+        {
+            
+        }
+        function myfun()
+        {
+            var m=document.getElementById("pass").value;
+            var n=document.getElementById("user").value;
+            var a=document.getElementById("name").value;
+            var b=document.getElementById("rollno").value;
+            var c=document.getElementById("phno").value;
+            var d=document.getElementById("e-mail").value;
+            var e=document.getElementById("dept").value;
+            
+            localStorage.setItem("user1",n);
+            localStorage.setItem("password1",m);
+           /* document.write(localStorage.getItem("password1"));*/
+            if(a=="")
+            {
+                alert("enter name");
+            }
+            else if(b==""){
+                alert("enter rollno");
+            }
+            else if(c=="")
+            {
+                alert("enter phno");
+            }
+            else if(n=="")
+            {
+                alert("enter username");}
+             else   if(n.length<5)
+                {
+                    alert("username must be atleast 5 letters");
+                }
+            
+           else if(m=="")
+           { alert("enter password");}
+          else if(m.length<8)
+            {
+                alert("password must be eight letters");
+            }
+        
+            else if(d=="")
+            {
+                alert("enter e-mail");
+
+            }
+            else if(e=="select")
+            {
+                alert("select department");
+            }
+            else
+            {
+                window.alert("Submitted Successfully")
+            }
+        }
+        </script>
+</head>
+<body>
+    
+ <img src="au1.png" height="90" width="400"  >
+  <form id="form1" ><br><br>
+    <h1 >Registration for library management</h1><br><br>
+   <div class="form2">
+    NAME:<input type="text" name="name" id="name"><br><br>
+    ROLL NO:<input type="text" name="rollno" id="rollno"><br><br>
+    PHONE NUMBER:<input type="text" id="phno"><br><br>
+    USER NAME:<input type="text" id="user" name="username"><br><br>
+    NEW PASSWORD:<input type="password" id="pass" name="password"><br><br>
+    E-MAIL:<input type="text" id="e-mail"><br><br>
+    DEPARTMENT:<select id="dept">
+        <option value="select">--select--</option>
+        <option value="CSE">CSE</option>
+        <option value="IT">IT</option>
+        <option value="ECE">ECE</option>
+        <option value="AIML">AIML</option>
+        <option value="AIML">CIVIL</option>
+        <option value="AIML">MECH</option>
+
+    </select><br><br>
+ </div>
+   <div class="button"> <input type="button" name="submit" onclick="myfun()" value="submit">&nbsp&nbsp&nbsp;
+     <input type="reset" name="reset">  </div><br><br>
+     <a href="website.html" onclick="myfun1()">Back to Login Page</a>
+</form>
+</body>
+</html>
